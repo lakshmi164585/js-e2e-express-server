@@ -1,0 +1,18 @@
+---
+pool: 
+  vmImage: ubuntu_latest
+  name: "Azure pipelines"
+trigger:
+  - main
+steps:
+  - script: |
+      sudo apt update
+  - script: | 
+      sudo apt install nodejs
+    displayName: 'nodejs install' 
+  - script: |
+      sudo apt install npm 
+    displayName: 'npm install'
+  - script: |
+      npm run build
+    displayName: 'npm build'  
