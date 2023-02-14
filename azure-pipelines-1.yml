@@ -10,7 +10,7 @@ steps:
       sudo apt install nodejs -y
     displayName: 'nodejs install' 
   - script: |
-      sudo apt install npm 
+      sudo apt install npm -y 
     displayName: 'npm install'
   - script: |
       npm run build
