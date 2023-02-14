@@ -1,17 +1,19 @@
 ---
-pool: 
+pool:
   name: Default
 trigger:
   - main
 steps:
   - script: |
       sudo apt update
-  - script: | 
-      sudo apt install nodejs -y
-    displayName: 'nodejs install' 
   - script: |
-      sudo apt install npm -y 
+      sudo apt install nodejs
+    displayName: 'nodejs install'
+  - script: |
+      sudo apt install npm
     displayName: 'npm install'
   - script: |
-      npm run build
+      - cd js-e2e-express-server
+      - npm install package.json
+      - npm run build
     displayName: 'npm build'
