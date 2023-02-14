@@ -1,7 +1,6 @@
 ---
 pool: 
-  vmImage: ubuntu_latest
-  name: "Azure pipelines"
+  name: Default
 trigger:
   - main
 steps:
