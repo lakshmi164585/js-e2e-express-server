@@ -7,7 +7,7 @@ steps:
   - script: |
       sudo apt update
   - script: | 
-      sudo apt install nodejs
+      sudo apt install nodejs -y
     displayName: 'nodejs install' 
   - script: |
       sudo apt install npm 
