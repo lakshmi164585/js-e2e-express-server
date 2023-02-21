@@ -1,0 +1,9 @@
+--- 
+pool:
+  - name: "Azure Pipelines"
+trigger: 
+  - main
+extends:
+  template: ./parameter.yaml 
+  parameters:
+    string: 'install'
