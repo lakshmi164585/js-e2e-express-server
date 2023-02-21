@@ -1,0 +1,21 @@
+
+---
+parameters:
+- name: command
+  displayName: parameters for npmbuild
+  type: string
+  values:
+    - 'install' 
+    - 'build'
+steps: 
+   - task: "NodeTool@0" 
+     inputs:
+       versionSource: 'spec'
+       versionFilePath: '6.x' 
+   - task: Npm@1
+     inputs:
+       command: 'install'    
+   - task: Npm@1
+     inputs:
+       command: 'custom'    
+       customCommand: 'build'   
