@@ -1,7 +1,7 @@
 
 ---
 parameters:
-- name: command
+- name: 'command'
   displayName: parameters for npmbuild
   type: string
   values:
