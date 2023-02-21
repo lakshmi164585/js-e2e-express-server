@@ -1,7 +1,7 @@
 
 --- 
 pool:
-  name: "Azure Pipelines"
+  name: "Default"
 trigger: 
   - main
 steps: 
