@@ -2,6 +2,7 @@
 --- 
 pool:
   name: "Azure Pipelines"
+
 trigger: 
   - main
 steps: 
@@ -12,4 +13,4 @@ steps:
    - task: Npm@1
      inputs:
        command: 'install'    
-       workingDir: /home/ubuntu/myagent/_work/2/s
+    
