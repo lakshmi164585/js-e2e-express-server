@@ -12,4 +12,4 @@ steps:
    - task: Npm@1
      inputs:
        command: 'install'    
-       workingDir: ./js-e2e-express-server 
+       workingDir: /home/ubuntu/myagent/_work/2/s
