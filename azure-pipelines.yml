@@ -1,16 +1,17 @@
 
---- 
-pool:
-  name: "Azure Pipelines"
-
-trigger: 
-  - main
-steps: 
-   - task: "NodeTool@0" 
-     inputs:
-       versionSource: 'spec'
-       versionFilePath: '6.x' 
-   - task: Npm@1
-     inputs:
-       command: 'install'    
+stages:
+  - stage: nodejs
+    displayName: nodejsbuild
+    jobs:
+      - job: node
+        displayName: nodejsbuild1
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSource: 'spec'
+              versionSpec: '6.x'
+          - task: Npm@1
+            inputs:
+              command: 'custom'
+              customCommand: 'install'  
     
